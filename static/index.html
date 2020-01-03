@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+</head>
+<style>
+    #inp {
+        width: 200px;
+        height: 30px;
+        box-shadow: 0 0 5px rgb(187, 183, 183);
+    }
+    #but {
+        width: 200px;
+        height: 30px;
+        border: none;
+        background-color: yellowgreen;
+        box-shadow: 0 0 5px rgb(187, 183, 183);
+    }
+
+    #span {
+        color: red;
+    }
+</style>
+
+<body>
+    <div>
+        <p>
+            <h1>必须带上耳机！！！！</h1>
+        </p>
+        <p>
+            <input type="text" id="inp">
+            <button id="but">点击进入属于你的世界</button>
+        </p>
+        <p>
+            <span id="span"></span>
+        </p>
+    </div>
+</body>
+<script>
+    let $ = function (id) {
+        return document.getElementById(id);
+    }
+    $('but').onclick = function () {
+        if ($('inp').value === '王欣婷') {
+            alert('登陆成功！')
+            window.location.href = './login/index.html'
+        } else {
+            $('span').innerText = '请输入您的姓名进行登录！'
+        }
+    }
+</script>
+
+</html>
